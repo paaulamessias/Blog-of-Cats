@@ -3,3 +3,72 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+:root {
+  font-size: 62.5%;
+
+  --color-header: hsl(195, 91%, 25%);
+  --color-font: hsl(240, 6%, 13%);
+  --color-font-pesquisa: hsl(195, 46%, 40%);
+  --color-bg-light: #FFF;
+
+  font-family: "Mulish", sans-serif;
+}
+
+header {
+  background-color: var(--color-header);
+  padding: 1.2rem 2.8rem;
+}
+
+header .container {
+  max-width: 36.4rem;
+  margin-inline: auto;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  gap: 2.6rem;
+}
+
+a img {
+  width: 4rem;
+  height: 4rem;
+
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.avatar {
+  width: 4.2rem;
+  height: 4.2rem;
+
+  object-fit: cover;
+  border-radius: 50%;
+}
+form input::placeholder {
+  color: white;
+  opacity: .5;
+}
+
+form {
+  display: flex;
+  gap: 1.2rem;
+
+  border-radius: .4rem;
+  
+}
+  
+form input {
+  padding: 1.2rem 1.6rem 1.2rem 1.4rem;
+  width: 25rem;
+  border: 0;
+  color: white;
+}
+
+textarea:focus,
+input:focus {
+  outline: none;
+}
+    
+#search {
+  background-color: var(--color-font-pesquisa);
+}
