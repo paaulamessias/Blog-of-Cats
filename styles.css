@@ -3,26 +3,3 @@
   padding: 0;
   box-sizing: border-box;
 }
-
-
-:root {
-  --blue-dark: #065E7C;
-  --blue-light: #387E96;
-  --white-bg-mobile: #ffff;
-  --white-bg: #F4FCFF;
-  --black: #202024;
-}
-
-body {
-  font-size: 1rem;
-  background-color: var(--white-bg-mobile);
-  font-family: "Mulish", sans-serif;
-}
-
-h1 {
-  color: var(--black);
-    font-size: 1.5rem;
-    font-weight: 700;
-    line-height: 160%;
-    
-}
