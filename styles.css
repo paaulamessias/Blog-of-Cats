@@ -213,5 +213,9 @@ footer p {
   line-height: normal;
 }
 
-
+@media (min-width:1120px) {
+  body {
+    background-color: #ccdde5;
+  }
+}
 
