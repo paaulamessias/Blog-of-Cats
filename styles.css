@@ -7,12 +7,28 @@
 :root {
   font-size: 62.5%;
 
-  --color-header: hsl(195, 91%, 25%);
-  --color-font: hsl(240, 6%, 13%);
-  --color-font-pesquisa: hsl(195, 46%, 40%);
+  --color-header: #065d7a;
+  --color-font: #1f1f23;
+  --color-font-p: #121214;
+  --color-font-pesquisa: #377d95;
   --color-bg-light: #FFF;
-
+  --color-like-buttom: #065E7C;
+}
+html, main, aside {
   font-family: "Mulish", sans-serif;
+}
+
+
+body { 
+  
+  width: 43.0rem;
+  height: 19.45rem;
+  
+  margin-inline: auto;
+
+  display: flex;
+  flex-direction: column;
+
 }
 
 header {
@@ -35,6 +51,7 @@ a img {
 
   object-fit: cover;
   border-radius: 50%;
+
 }
 
 .avatar {
@@ -44,6 +61,7 @@ a img {
   object-fit: cover;
   border-radius: 50%;
 }
+
 form input::placeholder {
   color: white;
   opacity: .5;
@@ -52,16 +70,14 @@ form input::placeholder {
 form {
   display: flex;
   gap: 1.2rem;
-
-  border-radius: .4rem;
+  }
   
-}
-  
-form input {
+  form input {
   padding: 1.2rem 1.6rem 1.2rem 1.4rem;
   width: 25rem;
   border: 0;
   color: white;
+  border-radius: .4rem;
 }
 
 textarea:focus,
@@ -71,4 +87,51 @@ input:focus {
     
 #search {
   background-color: var(--color-font-pesquisa);
+  font-weight: 600;
+}
+
+main {
+padding: 0 2.2rem;
+}
+
+.header-img {
+  width: 100%;
+  border-radius: 0 0 .5rem .5rem;
+}
+
+main h1 {
+  font-size: 2.4rem;
+  line-height: 160%;
+}
+  
+main .title-container {
+  margin-top: 3.1rem;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 1.2rem;
+  margin-top: .8rem;
+  margin-bottom: 3.1rem;
+}
+
+.like, .dislike {
+  background-color: var(--color-like-buttom);
+  border-radius: 50%;
+  border: none;
+  width: 4rem;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dislike img {
+  transform: rotate(180deg);
+}
+
+main p {
+    color: var(--color-font-p);
+    font-size:1.6rem;
+    line-height: 160%;
 }
