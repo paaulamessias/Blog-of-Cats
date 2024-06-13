@@ -6,15 +6,18 @@
 
 :root {
   font-size: 62.5%;
-
-  --color-header: #065d7a;
-  --color-font: #1f1f23;
-  --color-font-p: #121214;
-  --color-font-pesquisa: #377d95;
+  --hue:240;
+  --color-header: hsl(195, 91%, 25%);
+  --color-font: hsl(240, 6%, 13%);
+  --color-font-p: hsl(240, 5%, 7%);
+  --color-font-pesquisa: hsl(195, 46%, 40%);
+  --color-footer: hsl(195, 46%, 40%);
   --color-bg-light: #FFF;
-  --color-like-buttom: #065E7C;
+  --color-like-buttom: hsl(195, 91%, 25%);
+  --color-aside-h1:hsl(240, 6%, 13%);
+  --color-search-hover: hsl(195, 54%, 47%);
 }
-html, main, aside {
+html, main, aside, footer {
   font-family: "Mulish", sans-serif;
 }
 
@@ -90,7 +93,16 @@ input:focus {
   font-weight: 600;
 }
 
-main {
+#search:hover {
+  background: var(--color-search-hover);
+}
+
+.figuras:hover{
+ filter: contrast(101%) saturate(200%);
+}
+
+main,
+aside {
 padding: 0 2.2rem;
 }
 
@@ -126,6 +138,11 @@ main .title-container {
   justify-content: center;
 }
 
+.like:hover, .dislike:hover {
+  cursor: pointer;
+  background: var(--color-font-pesquisa);
+}
+
 .dislike img {
   transform: rotate(180deg);
 }
@@ -134,4 +151,67 @@ main p {
     color: var(--color-font-p);
     font-size:1.6rem;
     line-height: 160%;
+    margin-bottom: 3.4rem;
 }
+
+aside h1 {
+    color: var(--color-aside-h1);
+    
+    font-size: 2.4rem;
+    line-height: 160%;
+    margin-bottom: 3.2rem;
+}
+
+.gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+}
+
+.gallery-card {
+  display: flex;
+  gap: 1.6rem;
+}
+
+.gallery-card img {
+    width: 15.1rem;
+    height: 8.4rem;
+    
+    border-radius: .5rem;
+}
+
+ .gallery-card:hover {
+   filter: hue-rotate(3deg) contrast(101%) saturate(200%);
+   transform: scale(1.1) rotate(-1deg);
+ }
+
+figcaption h2 {
+    color: var(--color-aside-h1);
+    
+    font-size: 1.8rem;
+    margin-bottom: 1.3rem;
+}
+
+figcaption span {
+    color: var(--color-font-p);
+    
+    font-size: 1.4rem;
+
+}
+
+footer {
+    margin-top: 2.5rem;
+    background-color:var(--color-footer);
+    border-radius: .5rem .5rem 0 0;
+}
+
+footer p {
+  padding: 1.6rem;
+  color: #FFF;
+  text-align: center;
+  font-size: 1.6rem;
+  line-height: normal;
+}
+
+
+
